@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Unidad Educativa Guaraguao</title>
+  <style>
+    body { margin: 0; }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Basic Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+<!-- Filled Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+<!-- Brand Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+  <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
-    
+
+    <main class="w-100">
+        <div class="topbar ">
+            <div class="container-xxl d-flex align-items-center justify-content-between h-100">
+                <h1 class="d-flex align-items-center fs-3 topbar-title"><i class="bxf bx-education me-2"></i> U.E. Guaraguao</h1>
+
+                <nav class="nav">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link" href="#">Nuestra Historia</a>
+                    <a class="nav-link" href="#">Actividades Académicas</a>
+                    <a class="nav-link" href="#">Normas de Convivencia</a>
+                    <a class="nav-link" href="#">Dónde Estamos</a>
+                    <a class="nav-link" href="#">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        <div class=" bg-blue" style="height: calc(100vh - 60px);">
+            <div class="container-xxl h-100">
+                <div class="row align-items-center justify-content-center h-100">
+                    <div class="col-6 h-auto d-flex flex-column justify-content-between">
+                        <h2 class="text-white fs-1 mb-5">Bienvenidos a nuestra Unidad Educativa</h2>
+                        <div class="text-container">
+                            <p class="text-white fs-6 mb-3">En nuestra institución, nos dedicamos a brindar una educación de calidad que fomente el desarrollo integral de nuestros estudiantes. Contamos con un equipo docente comprometido y un ambiente de aprendizaje estimulante.</p>
+                            <p class="text-white fs-6 mb-5">Nuestra misión es formar ciudadanos responsables, creativos y críticos, capaces de enfrentar los desafíos del mundo actual. Ofrecemos una amplia variedad de actividades extracurriculares para complementar la formación académica de nuestros alumnos.</p>
+                            <a class="btn custom-text-primary btn-lg rounded-1 fw-semibold" style="background-color: #FED488;" href="#" role="button">Conoce Nuestra Historia</a>
+                        </div>
+                    </div>
+                    <div id="3d-model-container" class="col-6 h-100 overflow-hidden">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script type="module">
+    import { init } from './main.js';
+    init();
+  </script>
+  
 </body>
 </html>
