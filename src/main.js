@@ -33,7 +33,7 @@ export function init() {
   let model;
 
   loader.load(
-    './assets/EscudoGuaraguao.glb', // 👈 tu archivo
+    './assets/EscudoGuaraguao.glb', 
     (gltf) => {
       model = gltf.scene;
       scene.add(model);
@@ -61,10 +61,10 @@ export function init() {
     camera.updateProjectionMatrix();
   }
 
-  // 🔥 inicializa tamaño correcto
+  // inicializa tamaño correcto
   resize();
 
-  // 🔥 observer para cambios del contenedor
+  // observer para cambios del contenedor
   const observer = new ResizeObserver(() => {
     resize();
   });
