@@ -57,43 +57,88 @@
   display: block;
 }
 
-.activity-card {
-    position: relative;
-    min-height: 260px;
-    border-radius: 0.75rem;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: 0 10px 24px rgba(2, 32, 68, 0.2);
+.actividades-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.4rem;
 }
 
-.activity-overlay {
-    position: absolute;
-    inset: 0;
+.actividad-item {
+    min-width: 0;
+}
+
+.activity-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid #d9e1ec;
+    box-shadow: 0 10px 24px rgba(2, 32, 68, 0.12);
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    gap: 0.6rem;
-    padding: 1.4rem;
-    color: #ffffff;
-    background: linear-gradient(to top, rgba(2, 32, 68, 0.85) 0%, rgba(2, 32, 68, 0.2) 60%, rgba(2, 32, 68, 0) 100%);
+}
+
+.activity-image {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.activity-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 1.1rem 1.1rem 1.25rem;
+    flex: 1;
+}
+
+.activity-meta {
+    margin: 0;
+    color: var(--secondary-color);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 .activity-title {
-    font-size: 1.35rem;
+    color: var(--primary-color);
+    font-size: 1.18rem;
     font-weight: 700;
     margin: 0;
+    line-height: 1.3;
 }
 
 .activity-description {
+    color: #3f4f63;
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.5;
+}
+
+.activity-link {
+    margin-top: auto;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.activity-link:hover {
+    color: var(--secondary-color);
 }
 
 @media (max-width: 991.98px) {
-    .activity-card {
-        min-height: 240px;
+    .activity-image {
+        height: 190px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .actividades-grid {
+        grid-template-columns: 1fr;
     }
 }
 

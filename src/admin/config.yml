@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main # Asegúrate de que coincida con tu rama de GitHub
+
+# Configuración de carpetas de imágenes
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "blog"
+    label: "Entradas de Blog"
+    folder: "src/blog" # Los posts individuales se guardarán aquí
+    format: "json"     # Fuerza a Decap CMS a guardar en formato JSON
+    create: true       # Permite crear nuevos posts desde el panel
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha de Publicación", name: "date", widget: "datetime" }
+      - { label: "Descripción Corta", name: "description", widget: "string" }
+      - { label: "Imagen de Portada", name: "image", widget: "image" }
+      - { label: "Contenido del Post", name: "body", widget: "text" }
