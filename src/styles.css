@@ -140,6 +140,12 @@
     .actividades-grid {
         grid-template-columns: 1fr;
     }
+
+    .actividad-item,
+    .activity-item {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
 }
 
 .historia-section {
@@ -193,6 +199,8 @@
         padding: 0;
     }
 }
+
+/* Footer Styles */
 
 .footer-section {
     background-color: var(--background-color-secondary);

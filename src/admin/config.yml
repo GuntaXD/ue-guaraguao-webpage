@@ -17,5 +17,11 @@ collections:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Fecha de Publicación", name: "date", widget: "datetime" }
       - { label: "Descripción Corta", name: "description", widget: "string" }
-      - { label: "Imagen de Portada", name: "image", widget: "image" }
+
+      - label: "Galería de Imágenes"
+        name: "images"
+        widget: "list"
+        summary: "{{fields.image}}"
+        field: { label: "Imagen", name: "image", widget: "image" }
+        
       - { label: "Contenido del Post", name: "body", widget: "text" }
