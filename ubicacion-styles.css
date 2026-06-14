@@ -1,0 +1,128 @@
+.ubicacion-page {
+    background: linear-gradient(180deg, #f8f9fb 0%, #ffffff 35%, #f4f7fb 100%);
+}
+
+.ubicacion-hero {
+    padding: 4rem 0 2rem;
+}
+
+.ubicacion-eyebrow {
+    margin: 0 0 0.7rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.ubicacion-title {
+    margin: 0 0 0.9rem;
+    color: var(--primary-color);
+    font-size: clamp(2rem, 4vw, 2.9rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.ubicacion-lead {
+    margin: 0;
+    color: #3f4f63;
+    max-width: 62ch;
+    line-height: 1.75;
+    font-size: 1.02rem;
+}
+
+.ubicacion-info {
+    padding-bottom: 1.8rem;
+}
+
+.ubicacion-card {
+    background-color: #ffffff;
+    border: 1px solid #d9e1ec;
+    border-radius: 0.9rem;
+    box-shadow: 0 8px 20px rgba(2, 32, 68, 0.08);
+    height: 100%;
+    padding: 1.15rem;
+}
+
+.ubicacion-card i {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.ubicacion-card h3 {
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    margin: 0.5rem 0;
+    font-weight: 700;
+}
+
+.ubicacion-card p,
+.ubicacion-card li {
+    margin: 0;
+    color: #3f4f63;
+    line-height: 1.6;
+}
+
+.ubicacion-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.mapa-section {
+    padding: 0 0 2.8rem;
+}
+
+.mapa-wrapper {
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 1px solid #d9e1ec;
+    box-shadow: 0 10px 26px rgba(2, 32, 68, 0.12);
+    background-color: #ffffff;
+}
+
+.mapa-wrapper iframe {
+    width: 100%;
+    min-height: 460px;
+    border: 0;
+    display: block;
+}
+
+.ruta-section {
+    padding-bottom: 4.2rem;
+}
+
+.ruta-box {
+    background-color: #ffffff;
+    border: 1px solid #d9e1ec;
+    border-radius: 0.9rem;
+    box-shadow: 0 8px 20px rgba(2, 32, 68, 0.08);
+    padding: 1.2rem;
+}
+
+.ruta-title {
+    color: var(--primary-color);
+    margin: 0 0 0.75rem;
+    font-weight: 700;
+}
+
+.ruta-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: #3f4f63;
+    line-height: 1.65;
+}
+
+@media (max-width: 991.98px) {
+    .ubicacion-hero {
+        padding-top: 3.2rem;
+    }
+
+    .mapa-wrapper iframe {
+        min-height: 390px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .mapa-wrapper iframe {
+        min-height: 320px;
+    }
+}
