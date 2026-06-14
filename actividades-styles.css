@@ -72,14 +72,54 @@
     color: var(--secondary-color);
 }
 
+.actividad-modal .actividad-modal-dialog {
+    width: min(1100px, 92vw);
+    max-width: min(1100px, 92vw);
+}
+
+.actividad-modal .actividad-modal-content {
+    height: min(600px, 84vh);
+}
+
+.actividad-modal .actividad-modal-carousel,
+.actividad-modal .carousel-inner,
+.actividad-modal .carousel-item {
+    height: 100%;
+}
+
+.actividad-modal .carousel-item {
+    background: #0a1c33;
+}
+
+.actividad-modal .actividad-modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
 @media (max-width: 991.98px) {
     .activity-image {
         height: 190px;
+    }
+
+    .actividad-modal .actividad-modal-content {
+        height: min(600px, 82vh);
     }
 }
 
 @media (max-width: 767.98px) {
     .actividades-grid {
         grid-template-columns: 1fr;
+    }
+
+    .actividad-modal .actividad-modal-dialog {
+        width: calc(100vw - 1.25rem);
+        max-width: calc(100vw - 1.25rem);
+        margin: 0.625rem auto;
+    }
+
+    .actividad-modal .actividad-modal-content {
+        height: min(600px, 92vh);
     }
 }
