@@ -1,0 +1,241 @@
+.historia-page {
+    background: linear-gradient(180deg, #f8f9fb 0%, #ffffff 28%, #f4f7fb 100%);
+}
+
+.historia-hero {
+    padding: 4.5rem 0 3.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.historia-hero::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(254, 212, 136, 0.4) 0%, rgba(254, 212, 136, 0) 72%);
+    top: -80px;
+    right: -80px;
+    pointer-events: none;
+}
+
+.historia-eyebrow {
+    color: var(--secondary-color);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.historia-main-title {
+    color: var(--primary-color);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.historia-lead {
+    color: #3f4f63;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin: 0;
+    max-width: 58ch;
+}
+
+.historia-hero-card {
+    background-color: #ffffff;
+    border: 1px solid #d9e1ec;
+    border-radius: 1rem;
+    box-shadow: 0 10px 28px rgba(2, 32, 68, 0.1);
+    overflow: hidden;
+}
+
+.historia-hero-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.historia-hero-caption {
+    padding: 1rem 1.1rem;
+    margin: 0;
+    color: #4a5b72;
+    font-size: 0.95rem;
+}
+
+.historia-stats {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.historia-stats li {
+    background-color: #ffffff;
+    border: 1px solid #d9e1ec;
+    border-radius: 0.85rem;
+    padding: 1rem;
+    box-shadow: 0 6px 16px rgba(2, 32, 68, 0.08);
+}
+
+.historia-stats strong {
+    display: block;
+    font-size: 1.45rem;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.historia-stats span {
+    color: #4a5b72;
+    font-size: 0.93rem;
+}
+
+.timeline-section {
+    padding: 1rem 0 4.2rem;
+}
+
+.timeline-title {
+    color: var(--primary-color);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    margin-bottom: 2rem;
+    font-weight: 800;
+}
+
+.timeline-list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline-list::before {
+    content: "";
+    position: absolute;
+    left: 94px;
+    top: 0;
+    bottom: 0;
+    height: calc(100% - 20px);
+    width: 2px;
+    background-color: #cdd8e6;
+}
+
+.timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1.25rem;
+    padding-bottom: 1.5rem;
+}
+
+
+.timeline-year {
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 88px;
+    top: calc( 50% - 20px);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 2px rgba(2, 32, 68, 0.18);
+}
+
+.timeline-card {
+    background-color: #ffffff;
+    border: 1px solid #d9e1ec;
+    border-radius: 0.85rem;
+    padding: 1rem 1.1rem;
+    box-shadow: 0 8px 20px rgba(2, 32, 68, 0.09);
+}
+
+.timeline-card h3 {
+    margin: 0 0 0.45rem;
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.timeline-card p {
+    margin: 0;
+    color: #3f4f63;
+    line-height: 1.6;
+}
+
+.historia-values {
+    padding: 0 0 4.6rem;
+}
+
+.value-card {
+    height: 100%;
+    background-color: #ffffff;
+    border: 1px solid #d9e1ec;
+    border-radius: 0.85rem;
+    padding: 1.25rem;
+    box-shadow: 0 8px 20px rgba(2, 32, 68, 0.08);
+}
+
+.value-card i {
+    color: var(--secondary-color);
+    font-size: 1.7rem;
+}
+
+.value-card h3 {
+    margin-bottom: 0.45rem;
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.value-card p {
+    margin: 0;
+    color: #3f4f63;
+    line-height: 1.6;
+}
+
+@media (max-width: 991.98px) {
+    .historia-hero {
+        padding-top: 3.3rem;
+    }
+
+    .historia-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-list::before {
+        left: 7px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        padding-left: 2rem;
+    }
+
+    .timeline-item::before {
+        left: 0;
+    }
+
+    .timeline-year {
+        padding-top: 0;
+    }
+}
+
+.brand-logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
