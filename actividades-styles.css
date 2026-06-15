@@ -1,4 +1,25 @@
 
+.actividades-header-surface {
+    background:
+        radial-gradient(circle at 85% 22%, rgba(255, 224, 164, 0.22) 0%, rgba(255, 224, 164, 0) 42%),
+        linear-gradient(118deg, #0b2f5e 0%, #2f5f96 56%, #426f9f 100%);
+}
+
+.actividades-page .topbar.topbar-home {
+    background: transparent;
+    border-bottom: 0;
+    box-shadow: none;
+}
+
+.actividades-page .topbar.topbar-home .topbar-title,
+.actividades-page .topbar.topbar-home .topbar-brand {
+    color: #ffffff;
+}
+
+.actividades-section {
+    margin-top: 2.6rem;
+}
+
 .actividades-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
