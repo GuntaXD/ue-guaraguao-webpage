@@ -16,6 +16,59 @@
     color: #ffffff;
 }
 
+.home-menu-btn {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.75rem;
+    font-weight: 700;
+    padding: 0.45rem 0.8rem;
+}
+
+.home-menu-btn:hover,
+.home-menu-btn:focus {
+    color: #0a2a53;
+    background: #fed488;
+    border-color: #fed488;
+}
+
+.home-sidebar {
+    background: linear-gradient(165deg, #103662 0%, #1e4f85 62%, #2d628f 100%);
+    color: #ffffff;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-sidebar-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-sidebar-logo {
+    width: 32px;
+    height: 32px;
+}
+
+.home-sidebar-nav {
+    gap: 0.3rem;
+}
+
+.home-sidebar-nav .nav-link {
+    border-radius: 0.65rem;
+    color: rgba(236, 244, 255, 0.94);
+    border-bottom: 0;
+    font-weight: 700;
+    padding: 0.6rem 0.75rem;
+}
+
+.home-sidebar-nav .nav-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.home-sidebar-nav .nav-link.active {
+    color: #0a2a53;
+    background: #fed488;
+}
+
 .actividades-section {
     margin-top: 2.6rem;
 }
@@ -120,6 +173,12 @@
 }
 
 @media (max-width: 991.98px) {
+    .actividades-page .topbar-home-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .activity-image {
         height: 190px;
     }
@@ -130,6 +189,11 @@
 }
 
 @media (max-width: 767.98px) {
+    .home-menu-btn {
+        padding: 0.38rem 0.66rem;
+        font-size: 0.9rem;
+    }
+
     .actividades-grid {
         grid-template-columns: 1fr;
     }

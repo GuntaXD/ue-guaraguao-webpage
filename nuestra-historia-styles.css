@@ -6,6 +6,9 @@
     background:
         radial-gradient(circle at 85% 22%, rgba(255, 224, 164, 0.22) 0%, rgba(255, 224, 164, 0) 42%),
         linear-gradient(118deg, #0b2f5e 0%, #2f5f96 56%, #426f9f 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 100%, cover;
+    background-position: top right, center top;
 }
 
 .historia-page .topbar.topbar-home {
@@ -17,6 +20,59 @@
 .historia-page .topbar.topbar-home .topbar-title,
 .historia-page .topbar.topbar-home .topbar-brand {
     color: #ffffff;
+}
+
+.home-menu-btn {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.75rem;
+    font-weight: 700;
+    padding: 0.45rem 0.8rem;
+}
+
+.home-menu-btn:hover,
+.home-menu-btn:focus {
+    color: #0a2a53;
+    background: #fed488;
+    border-color: #fed488;
+}
+
+.home-sidebar {
+    background: linear-gradient(165deg, #103662 0%, #1e4f85 62%, #2d628f 100%);
+    color: #ffffff;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-sidebar-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-sidebar-logo {
+    width: 32px;
+    height: 32px;
+}
+
+.home-sidebar-nav {
+    gap: 0.3rem;
+}
+
+.home-sidebar-nav .nav-link {
+    border-radius: 0.65rem;
+    color: rgba(236, 244, 255, 0.94);
+    border-bottom: 0;
+    font-weight: 700;
+    padding: 0.6rem 0.75rem;
+}
+
+.home-sidebar-nav .nav-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.home-sidebar-nav .nav-link.active {
+    color: #0a2a53;
+    background: #fed488;
 }
 
 .historia-hero {
@@ -227,6 +283,17 @@
 }
 
 @media (max-width: 991.98px) {
+    .historia-header-surface {
+        background-size: 170% 100%, cover;
+        background-position: 78% 0, center top;
+    }
+
+    .historia-page .topbar-home-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .historia-hero {
         min-height: auto;
         padding-top: 2.2rem;
@@ -255,6 +322,13 @@
 
     .timeline-year {
         padding-top: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .home-menu-btn {
+        padding: 0.38rem 0.66rem;
+        font-size: 0.9rem;
     }
 }
 
