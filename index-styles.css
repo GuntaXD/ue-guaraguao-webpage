@@ -113,7 +113,7 @@
 
 
 .hero-home {
-    min-height: calc(100vh - 74px);
+    min-height: clamp(480px, calc(100vh - 74px), 720px);
     background: transparent;
 }
 
