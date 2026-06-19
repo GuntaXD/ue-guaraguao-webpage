@@ -124,6 +124,13 @@ async function cargarBlog() {
             const modalId = `vistaCardModal-${postId}`;
             const carouselId = `carousel-${postId}`;
             const fechaFormateada = formatearFecha(post.date);
+            const resumen = post.description || 'Sin descripcion disponible.';
+            const cuerpoFormateado = post.body
+                ? post.body
+                    .split(/\n\s*\n/)
+                    .map(parrafo => `<p class="actividad-modal-body-paragraph">${parrafo.replace(/\n/g, '<br>')}</p>`)
+                    .join('')
+                : '<p class="actividad-modal-body-paragraph mb-0">Sin contenido adicional.</p>';
             const imagenesOriginales = Array.isArray(post.images) && post.images.length > 0
                             ? post.images
                             : (post.image ? [post.image] : []);
@@ -159,14 +166,22 @@ async function cargarBlog() {
                         </div>
                     </div>
 
-                        <div class="col-md-4 p-4 d-flex flex-column justify-content-between">
-                            <div>
-                            <div class="d-flex justify-content-between align-items-start">
-                                <h3 class="modal-title fw-bold">${post.title}</h3>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                                <p class="text-muted small mb-3">Fecha: ${fechaFormateada}</p>
-                                <p class="text-secondary">${post.description}</p>
+                        <div class="col-md-4 p-4 d-flex flex-column actividad-modal-side">
+                            <div class="actividad-modal-text">
+                                <div class="actividad-modal-text-header d-flex justify-content-between align-items-start gap-3">
+                                    <div>
+                                        <h3 class="modal-title fw-bold actividad-modal-title">${post.title}</h3>
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+
+                                <p class="actividad-modal-date mb-3">Fecha: ${fechaFormateada}</p>
+                                <p class="actividad-modal-summary">${resumen}</p>
+                                <hr class="actividad-modal-divider">
+
+                                <div class="actividad-modal-body">
+                                    ${cuerpoFormateado}
+                                </div>
                             </div>
                             
                         </div>

@@ -256,6 +256,11 @@
 
 .actividad-modal .actividad-modal-content {
     height: min(600px, 84vh);
+    overflow: hidden;
+}
+
+.actividad-modal .modal-body {
+    overflow: hidden;
 }
 
 .actividad-modal .actividad-modal-carousel,
@@ -273,6 +278,67 @@
     height: 100%;
     object-fit: contain;
     display: block;
+}
+
+.actividad-modal .actividad-modal-side {
+    height: 100%;
+    overflow: hidden;
+}
+
+.actividad-modal .actividad-modal-text {
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 0.25rem;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.actividad-modal-title {
+    font-size: clamp(1.25rem, 1.4vw, 1.55rem);
+    line-height: 1.2;
+    color: #13294b;
+    margin: 0;
+}
+
+.actividad-modal-date {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #5f7289;
+}
+
+.actividad-modal-summary {
+    color: #334a63;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+}
+
+.actividad-modal-divider {
+    border-top: 1px solid #e4ecf5;
+    opacity: 1;
+    margin: 0.95rem 0;
+}
+
+.actividad-modal-body {
+    color: #2f445d;
+}
+
+.actividad-modal-body-paragraph {
+    margin: 0 0 0.9rem;
+    line-height: 1.64;
+}
+
+.actividad-modal .actividad-modal-text::-webkit-scrollbar {
+    width: 8px;
+}
+
+.actividad-modal .actividad-modal-text::-webkit-scrollbar-thumb {
+    background: #c7d7ea;
+    border-radius: 999px;
+}
+
+.actividad-modal .actividad-modal-text::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 @media (max-width: 991.98px) {
