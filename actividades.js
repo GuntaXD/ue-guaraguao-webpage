@@ -1,7 +1,7 @@
 // Configura los datos de tu repositorio
 const USUARIO_GITHUB = "GuntaXD";
 const REPOSITORIO = "ue-guaraguao-webpage";
-const CARPETA_BLOG = "src/blog";
+const CARPETA_BLOG = "blog";
 const BASE_ASSETS_IMAGES_URL = "https://guntaxd.github.io/ue-guaraguao-webpage/assets/images/";
 
 function normalizarUrlImagen(url) {
