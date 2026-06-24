@@ -5,6 +5,8 @@ export function init() {
 
   const container = document.getElementById('3d-model-container');
 
+  if (!container) return;
+
   const scene = new THREE.Scene();
 
   const camera = new THREE.PerspectiveCamera(
@@ -15,25 +17,37 @@ export function init() {
   );
 
   const renderer = new THREE.WebGLRenderer({
-    alpha: true
-});
+    alpha: true,
+    antialias: true,
+  });
 
-    scene.add(new THREE.AmbientLight(0xffffff, 1));
+  renderer.domElement.style.width = '100%';
+  renderer.domElement.style.height = '100%';
+  renderer.domElement.style.display = 'block';
 
-    const light = new THREE.DirectionalLight(0xffffff, 1);
+    scene.add(new THREE.AmbientLight(0xffffff, 1.5));
+
+    const light = new THREE.DirectionalLight(0xffffff, 1.8);
     light.position.set(5, 5, 5);
     scene.add(light);
+
+    const fillLight = new THREE.DirectionalLight(0xffffff, 0.9);
+    fillLight.position.set(-3, 2, 4);
+    scene.add(fillLight);
 
   container.appendChild(renderer.domElement);
 
 
 
   const loader = new GLTFLoader();
+  const clock = new THREE.Clock();
+  const swingAmplitude = Math.PI / 7; // ~22.5 grados
+  const swingSpeed = 0.8;
 
   let model;
 
   loader.load(
-    './assets/EscudoGuaraguao.glb', 
+    './assets/EscudoGuaraguaoPrueba.glb', 
     (gltf) => {
       model = gltf.scene;
       scene.add(model);
@@ -49,13 +63,16 @@ export function init() {
   );
 
 
-  camera.position.z = 5;
+  camera.position.z = 3.3;
+  camera.position.y = .8;
 
   // 🔹 RESIZE FUNCTION
   function resize() {
     const rect = container.getBoundingClientRect();
 
-    renderer.setSize(rect.width, rect.height);
+    if (rect.width <= 0 || rect.height <= 0) return;
+
+    renderer.setSize(rect.width, rect.height, false);
 
     camera.aspect = rect.width / rect.height;
     camera.updateProjectionMatrix();
@@ -75,7 +92,8 @@ export function init() {
     requestAnimationFrame(animate);
 
     if (model) {
-      model.rotation.y += 0.01; // opcional animación
+      const elapsed = clock.getElapsedTime();
+      model.rotation.y = Math.sin(elapsed * swingSpeed) * swingAmplitude;
     }
 
     renderer.render(scene, camera);

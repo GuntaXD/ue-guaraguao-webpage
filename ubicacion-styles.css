@@ -1,0 +1,209 @@
+.ubicacion-page {
+    background: linear-gradient(180deg, #f8f9fb 0%, #ffffff 35%, #f4f7fb 100%);
+}
+
+.ubicacion-header-surface {
+    background:
+        radial-gradient(circle at 85% 22%, rgba(255, 224, 164, 0.22) 0%, rgba(255, 224, 164, 0) 42%),
+        linear-gradient(118deg, #0b2f5e 0%, #2f5f96 56%, #426f9f 100%);
+}
+
+.ubicacion-page .topbar.topbar-home {
+    background: transparent;
+    border-bottom: 0;
+    box-shadow: none;
+}
+
+.ubicacion-page .topbar.topbar-home .topbar-title,
+.ubicacion-page .topbar.topbar-home .topbar-brand {
+    color: #ffffff;
+}
+
+.home-menu-btn {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.75rem;
+    font-weight: 700;
+    padding: 0.45rem 0.8rem;
+}
+
+.home-menu-btn:hover,
+.home-menu-btn:focus {
+    color: #0a2a53;
+    background: #fed488;
+    border-color: #fed488;
+}
+
+.home-sidebar {
+    background: linear-gradient(165deg, #103662 0%, #1e4f85 62%, #2d628f 100%);
+    color: #ffffff;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-sidebar-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-sidebar-logo {
+    width: 32px;
+    height: 32px;
+}
+
+.home-sidebar-nav {
+    gap: 0.3rem;
+}
+
+.home-sidebar-nav .nav-link {
+    border-radius: 0.65rem;
+    color: rgba(236, 244, 255, 0.94);
+    border-bottom: 0;
+    font-weight: 700;
+    padding: 0.6rem 0.75rem;
+}
+
+.home-sidebar-nav .nav-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.home-sidebar-nav .nav-link.active {
+    color: #0a2a53;
+    background: #fed488;
+}
+
+.ubicacion-hero {
+    padding: 2.5rem 0 2.4rem;
+}
+
+.ubicacion-eyebrow {
+    margin: 0 0 0.7rem;
+    color: #f8dca2;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.ubicacion-title {
+    margin: 0 0 0.9rem;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 2.9rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.ubicacion-lead {
+    margin: 0;
+    color: rgba(244, 249, 255, 0.94);
+    max-width: 62ch;
+    line-height: 1.75;
+    font-size: 1.02rem;
+}
+
+.ubicacion-info {
+    padding-bottom: 1.8rem;
+}
+
+.ubicacion-card {
+    background-color: #ffffff;
+    border: 1px solid #d9e1ec;
+    border-radius: 0.9rem;
+    box-shadow: 0 8px 20px rgba(2, 32, 68, 0.08);
+    height: 100%;
+    padding: 1.15rem;
+}
+
+.ubicacion-card i {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.ubicacion-card h3 {
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    margin: 0.5rem 0;
+    font-weight: 700;
+}
+
+.ubicacion-card p,
+.ubicacion-card li {
+    margin: 0;
+    color: #3f4f63;
+    line-height: 1.6;
+}
+
+.ubicacion-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.mapa-section {
+    padding: 0 0 2.8rem;
+}
+
+.mapa-wrapper {
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 1px solid #d9e1ec;
+    box-shadow: 0 10px 26px rgba(2, 32, 68, 0.12);
+    background-color: #ffffff;
+}
+
+.mapa-wrapper iframe {
+    width: 100%;
+    min-height: 460px;
+    border: 0;
+    display: block;
+}
+
+.ruta-section {
+    padding-bottom: 4.2rem;
+}
+
+.ruta-box {
+    background-color: #ffffff;
+    border: 1px solid #d9e1ec;
+    border-radius: 0.9rem;
+    box-shadow: 0 8px 20px rgba(2, 32, 68, 0.08);
+    padding: 1.2rem;
+}
+
+.ruta-title {
+    color: var(--primary-color);
+    margin: 0 0 0.75rem;
+    font-weight: 700;
+}
+
+.ruta-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: #3f4f63;
+    line-height: 1.65;
+}
+
+@media (max-width: 991.98px) {
+    .ubicacion-page .topbar-home-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .ubicacion-hero {
+        padding-top: 2rem;
+    }
+
+    .mapa-wrapper iframe {
+        min-height: 390px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .home-menu-btn {
+        padding: 0.38rem 0.66rem;
+        font-size: 0.9rem;
+    }
+
+    .mapa-wrapper iframe {
+        min-height: 320px;
+    }
+}
