@@ -3,13 +3,13 @@ backend:
   branch: main # Asegúrate de que coincida con tu rama de GitHub
 
 # Configuración de carpetas de imágenes
-media_folder: "src/assets/images"
-public_folder: "/src/assets/images"
+media_folder: "assets/images"
+public_folder: "assets/images"
 
 collections:
   - name: "blog"
     label: "Entradas de Blog"
-    folder: "src/blog" # Los posts individuales se guardarán aquí
+    folder: "blog" # Los posts individuales se guardarán aquí
     format: "json"     # Fuerza a Decap CMS a guardar en formato JSON
     create: true       # Permite crear nuevos posts desde el panel
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
