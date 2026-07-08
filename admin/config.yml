@@ -3,8 +3,8 @@ backend:
   branch: main # Asegúrate de que coincida con tu rama de GitHub
 
 # Configuración de carpetas de imágenes
-media_folder: "assets/images"
-public_folder: "assets/images"
+media_folder: "/assets/images"
+public_folder: "/assets/images"
 
 collections:
   - name: "blog"
