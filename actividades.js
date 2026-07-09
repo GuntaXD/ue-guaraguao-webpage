@@ -2,22 +2,22 @@
 const USUARIO_GITHUB = "GuntaXD";
 const REPOSITORIO = "ue-guaraguao-webpage";
 const CARPETA_BLOG = "blog";
-const BASE_ASSETS_IMAGES_URL = "https://guntaxd.github.io/ue-guaraguao-webpage/assets/images/";
 
 function normalizarUrlImagen(url) {
     if (!url || typeof url !== 'string') return '';
 
-    if (/^https?:\/\//i.test(url)) return url;
+    const limpia = url.trim();
+    if (/^https?:\/\//i.test(limpia)) return limpia;
 
-    if (url.startsWith('/assets/images/')) {
-        return `${BASE_ASSETS_IMAGES_URL}${url.replace('/assets/images/', '')}`;
+    if (limpia.startsWith('/assets/images/')) {
+        return limpia.replace(/^\/+/, '');
     }
 
-    if (url.startsWith('assets/images/')) {
-        return `${BASE_ASSETS_IMAGES_URL}${url.replace('assets/images/', '')}`;
+    if (limpia.startsWith('assets/images/')) {
+        return limpia;
     }
 
-    return url;
+    return `assets/images/${limpia.replace(/^\/+/, '')}`;
 }
 
 function formatearFecha(fechaISO) {
